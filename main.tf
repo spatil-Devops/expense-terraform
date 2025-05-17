@@ -22,7 +22,7 @@ module "backend" {
   source = "git::https://github.com/spatil-Devops/tf-module-app.git"
 
   name          = var.components["backend"]["name"]
-  instance_type = var.components["bakend"]["instance_type"]
+  instance_type = var.components["backend"]["instance_type"]
   env           = var.env
   port_no       = var.components["backend"]["port_no"]
 }
