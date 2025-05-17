@@ -1,5 +1,5 @@
 module "frontend" {
-  depends_on = ["module.backend"]
+  depends_on = [module.backend]
   source = "git::https://github.com/spatil-Devops/tf-module-app.git"
 
   name         = var.components["frontend"]["name"]
@@ -18,7 +18,7 @@ module "mysql" {
 }
 
 module "backend" {
-  depends_on = ["module.mysql"]
+  depends_on = [module.mysql]
   source = "git::https://github.com/spatil-Devops/tf-module-app.git"
 
   name          = var.components["backend"]["name"]
