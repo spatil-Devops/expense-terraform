@@ -19,3 +19,5 @@ components = {
     port_no       = 8080
   }
 }
+
+prometheus_servers = [""]

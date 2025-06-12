@@ -8,6 +8,8 @@ module "frontend" {
   port_no       = var.components["frontend"]["port_no"]
   vault_token   = var.vault_token
   SSH_PASSWORD  = var.SSH_PASSWORD
+  prometheus_servers = var.prometheus_servers
+  zone_id = data.aws_route53_zone.zone.zone_id
 }
 
 module "mysql" {
@@ -19,6 +21,8 @@ module "mysql" {
   port_no       = var.components["mysql"]["port_no"]
   vault_token   = var.vault_token
   SSH_PASSWORD  = var.SSH_PASSWORD
+  prometheus_servers = var.prometheus_servers
+  zone_id = data.aws_route53_zone.zone.zone_id
 }
 
 module "backend" {
@@ -31,4 +35,6 @@ module "backend" {
   port_no       = var.components["backend"]["port_no"]
   vault_token   = var.vault_token
   SSH_PASSWORD  = var.SSH_PASSWORD
+  prometheus_servers = var.prometheus_servers
+  zone_id = data.aws_route53_zone.zone.zone_id
 }
