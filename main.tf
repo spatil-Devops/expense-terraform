@@ -6,6 +6,8 @@ module "frontend" {
   instance_type = var.components["frontend"]["instance_type"]
   env           = var.env
   port_no       = var.components["frontend"]["port_no"]
+  vault_token   = var.vault_token
+  SSH_PASSWORD  = var.SSH_PASSWORD
 }
 
 module "mysql" {
@@ -15,6 +17,8 @@ module "mysql" {
   instance_type = var.components["mysql"]["instance_type"]
   env           = var.env
   port_no       = var.components["mysql"]["port_no"]
+  vault_token   = var.vault_token
+  SSH_PASSWORD  = var.SSH_PASSWORD
 }
 
 module "backend" {
@@ -25,4 +29,6 @@ module "backend" {
   instance_type = var.components["backend"]["instance_type"]
   env           = var.env
   port_no       = var.components["backend"]["port_no"]
+  vault_token   = var.vault_token
+  SSH_PASSWORD  = var.SSH_PASSWORD
 }
