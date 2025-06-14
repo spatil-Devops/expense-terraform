@@ -20,4 +20,4 @@ components = {
   }
 }
 
-prometheus_servers = [""]
+prometheus_servers = ["172.31.30.61/32"]
